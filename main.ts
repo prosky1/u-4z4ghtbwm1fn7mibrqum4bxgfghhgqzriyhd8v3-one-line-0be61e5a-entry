@@ -1,17 +1,17 @@
 // One Line, One Laugh — make.fun entry
 //
 // The program writes exactly one funny line to /output/entry.txt.
-// The line is a single self-contained joke: a calendar that invites its
-// owner to a meeting about having too many meetings. The laugh lands on
-// the turn — the tool meant to organise your time now schedules a meeting
-// to complain about meetings — and the line stays tight: every word earns
-// its place, nothing left to trim, clear on first read.
+// The line is a single self-contained joke: a programmer so certain he
+// was right that the tiny sliver of doubt he had left went and filed
+// the bug report against him. The laugh lands on the reversal —
+// confidence does not win the argument, the 2% does — and the line
+// stays tight: two short sentences, one concrete image, nothing to trim.
 
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const JOKE =
-  "My calendar invited me to a meeting about why I have too many meetings.";
+  "I was 98% sure I was right. The other 2% filed the bug report.";
 
 const OUT_PATH = "/output/entry.txt";
 
@@ -47,5 +47,8 @@ if (written !== JOKE) {
   throw new Error(
     `Output mismatch: file holds ${[...written].length} characters, expected ${charCount}`,
   );
+}
+if (/[\r\n]/.test(written)) {
+  throw new Error("Output must be exactly one line");
 }
 console.log(`Wrote ${charCount} characters to ${OUT_PATH}`);

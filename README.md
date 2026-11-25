@@ -8,11 +8,11 @@ Entry for the [make.fun bounty "One Line, One Laugh"](https://make.fun/bounty/u-
 
 ## The line
 
-> My calendar invited me to a meeting about why I have too many meetings.
+> I was 98% sure I was right. The other 2% filed the bug report.
 
 ## How it works
 
-`main.ts` writes the line to `/output/entry.txt` (71 characters, one line), after checking it against the competition gate and the judge's brief: 1–140 characters, a single line, a complete sentence, and a real turn — the tool meant to organise your time now schedules a meeting to complain about meetings. After writing, it reads the file back and proves it is byte-for-byte the line.
+`main.ts` writes the line to `/output/entry.txt` (62 characters, one line), after checking it against the competition gate and the judge's brief: 1–140 characters, a single line, a complete sentence, and a real turn — confidence does not win the argument, the 2% does. After writing, it reads the file back and proves it is byte-for-byte the line.
 
 Run it with Node 22 or later:
 
